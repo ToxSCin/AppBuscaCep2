@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AppBuscaCep2.Model
 {
-    internal class Bairro
+    public class Bairro
     {
+        public string descricao_bairro { get; set; }
     }
 }

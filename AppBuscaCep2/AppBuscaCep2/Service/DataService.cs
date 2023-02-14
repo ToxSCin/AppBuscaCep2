@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace AppBuscaCep2.Service
 {
-    internal class DataService
+    public class DataService
     {
     }
 }
