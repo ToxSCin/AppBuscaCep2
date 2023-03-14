@@ -6,8 +6,8 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <SearchBar x:Name="txt_logradouro"
-                           Placeholder="Qual é a sua rua?" />
-                <Button Text="Buscar" Clicked="Button_Clicked"/>
+                          Placeholder="Qual é a sua rua?" />
+                <Button Text="Buscar" Clicked="Button_Clicked_1"/>
             </StackLayout>
 
             <ActivityIndicator x:Name="carregando" Color="Blue" IsRunning="False" />
