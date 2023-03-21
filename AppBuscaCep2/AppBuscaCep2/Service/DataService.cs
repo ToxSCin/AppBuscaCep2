@@ -66,7 +66,7 @@ namespace AppBuscaCep2.Service
                 if (response.IsSuccessStatusCode)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
-
+                    
                     arr_logradouro = JsonConvert.DeserializeObject<List<Logradouro>>(json);
                 }
                 else

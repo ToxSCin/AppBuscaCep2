@@ -4,9 +4,22 @@
              x:Class="AppBuscaCep2.View.BairrosPorCidade">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="pck_estado"
+                 SelectedIndexChanged="pck_estado_SelectedIndexChanged"
+                        Title="Selecione o Estado:">
+                    <Picker.Items>
+                        <x:String>SP</x:String>
+                        <x:String>MG</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="pck_cidade"
+                SelectedIndexChanged="pck_cidade_SelectedIndexChanged"
+                ItemDisplayBinding="{Binding descricao}"
+                Title="Selecione a Cidade">
+                    
+                </Picker>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
