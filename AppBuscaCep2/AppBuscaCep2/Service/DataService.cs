@@ -19,7 +19,7 @@ namespace AppBuscaCep2.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=" + cep);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=17210580" + cep);
                 if (response.IsSuccessStatusCode)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
@@ -40,7 +40,7 @@ namespace AppBuscaCep2.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?cidade=" + id_cidade);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id=4874" + id_cidade);
                 if (response.IsSuccessStatusCode)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
@@ -62,7 +62,7 @@ namespace AppBuscaCep2.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=4874&bairro" + id_cidade + "&bairro=" + bairro);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=4874&bairro=" + id_cidade + "&bairro=" + bairro);
                 if (response.IsSuccessStatusCode)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
@@ -83,8 +83,7 @@ namespace AppBuscaCep2.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync(
-                    " " + uf);
+                HttpResponseMessage response = await client.GetAsync("" + uf);
 
                 if (response.IsSuccessStatusCode)
                 {
