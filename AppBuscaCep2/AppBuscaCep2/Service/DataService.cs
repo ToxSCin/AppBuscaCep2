@@ -83,7 +83,7 @@ namespace AppBuscaCep2.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("" + uf);
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=SP" + uf);
 
                 if (response.IsSuccessStatusCode)
                 {
